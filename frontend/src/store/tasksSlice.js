@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
-const url = 'https://jwt-mern-p322.onrender.com//api/tasks/'
+const url = 'https://jwt-mern-p322.onrender.com/api/tasks/'
 
 const initialState = {
     tasks: [],
