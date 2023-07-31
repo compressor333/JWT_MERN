@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
-const register_url = 'http://localhost:5000/api/users/'
-const login_url = 'http://localhost:5000/api/users/login'
+const register_url = 'https://jwt-mern-p322.onrender.com//api/users/'
+const login_url = 'https://jwt-mern-p322.onrender.com//api/users/login'
 
 
 const user = JSON.parse(localStorage.getItem('user'))
