@@ -10,8 +10,11 @@ const {errorHandler} = require('./middleware/errorMiddleware')
 const cors = require('cors')
 const path = require('path');
 
+const corsOptions = {
+  origin: "https://jwt-mern-frontend-3kib.onrender.com"
+}
 const app = express()
-app.use(cors())
+app.use(cors(corsOptions))
 
 app.use(morgan('dev'))
 app.use(express.json());
