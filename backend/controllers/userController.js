@@ -95,7 +95,7 @@ const verifyUser = async (req, res, next) => {
 
 const generateToken = (id) => {
     console.log(id)
-    return jwt.sign({ id }, process.env.JWT_SECRET, {
+    return jwt.sign({ id }, '1234', {
         expiresIn: '30d'
     })
 }
