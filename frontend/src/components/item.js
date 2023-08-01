@@ -16,7 +16,7 @@ export default function Item({ task1 }) {
     console.log(task1)
     // const { tasks } = useSelector((state) => state.tasks)
     return (
-        <Card variant="outlined" sx={{ minWidth: 200, maxHeight: 100, borderColor: 'primary.main',  }}>
+        <Card variant="outlined" sx={{ minWidth: 200, maxHeight: 100, borderColor: 'primary.main' }} >
             <CardContent>
                 <Typography sx={{ fontSize: 14 }} color="text.primary">Date: {new Date(task1.createdAt).toLocaleString('en-US')}</Typography>
                 <Typography sx={{ fontSize: 14 }} color="text.primary">

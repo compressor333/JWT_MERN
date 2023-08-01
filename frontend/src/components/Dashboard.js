@@ -71,7 +71,7 @@ const Dashboard = () => {
     <div>
       <GoalForm />
       <Box mt={2} mx="auto" maxWidth={600} maxHeight={400} >
-        {isLoading ? (<Box display="flex" justifyContent="center" alignItems="center"><CircularProgress /></Box>) : itemsToShow.length === 0 ? (<Box display="flex" justifyContent="center" alignItems="center"><Typography color="text.primary" variant="h4">No items to show</Typography></Box>) : (<Grid display="flex" justifyContent="center" alignItems="center" container spacing={{ xs: 4, md: 4 }} columns={{ xs: 3, sm: 3, md: 4 }}>
+        {isLoading ? (<Box display="flex" justifyContent="center" alignItems="center"><CircularProgress /></Box>) : itemsToShow.length === 0 ? (<Box display="flex" justifyContent="center" alignItems="center"><Typography color="text.primary" variant="h4">No items to show</Typography></Box>) : (<Grid display="flex" justifyContent="center" alignItems="center" container spacing={{ xs: 3, md: 3 }} columns={{ xs: 'auto', sm: 'auto', md: 'auto' }}>
           {itemsToShow.map((tasks, index) => (
             <Grid item xs={2} sm={2} md={2} key={tasks._id} >
               <Item task1={tasks} />
