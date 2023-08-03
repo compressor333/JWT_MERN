@@ -33,7 +33,7 @@ function Navbar() {
         dispatch(setCurrentPage(1))
     }
     return (
-        <AppBar position="static">
+        <AppBar position="static" color='primary'>
             <Toolbar>
                 <Box sx={{ flexGrow: 1 }}>
                     <Link to='/' style={{ display: 'flex', alignItems: 'center', color: 'inherit', textDecoration: 'none' }} onClick={resetPage}>
@@ -44,11 +44,11 @@ function Navbar() {
                 <Box> {user1 ? (<>
                     <Button sx={{ mr: 2 }} color="inherit" onClick={onLogout} to='/register'><LogoutIcon sx={{ mr: 1 }} /> Logout</Button>
                 </>) : (<>
-                    <Link to='register' style={{ color: 'inherit' }} >
-                        <Button sx={{ mr: 2, fontSize: isSmallScreen ? 12 : 15}} color="inherit" ><AccountCircleIcon sx={{ mr: 1 }} /> Register</Button>
+                    <Link to='register'  style={{ color: 'inherit',  }} >
+                       {isSmallScreen ? (<AccountCircleIcon sx={{marginRight: 3}}/>) : (<Button sx={{ mr: 2, fontSize: isSmallScreen ? 12 : 15}} color="inherit" ><AccountCircleIcon sx={{ mr: 1 }} /> Register</Button>)}
                     </Link>
                     <Link style={{ color: 'inherit'}} to='/login'>
-                        <Button color="inherit" sx={{ fontSize: isSmallScreen ? 12 : 15}}><LoginSharpIcon sx={{ mr: 1 }} />Login</Button>
+                         {isSmallScreen ? (<LoginSharpIcon sx={{}}/>) : (<Button color="inherit" sx={{ fontSize: isSmallScreen ? 12 : 15}}><LoginSharpIcon sx={{ mr: 1 }} />Login</Button>)}
                     </Link> </>)}
                 </Box>
 
